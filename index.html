@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="tienda">
+        <meta name="keywords" content="artesanias, artesanos, mercancia, productos, unicos">
+        <title>Artesanías de mi tierra</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	      <link rel="stylesheet" type="text/css" href="javaScript/alertifyjs/css/themes/default.css">
+        <link rel="shortcut icon" href="./iconos/ceramica.png" type="image/x-icon">
+        <link rel="stylesheet" href="./css/estilos.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark bg-warning">
+                <a class="navbar-brand text-dark" href="index.html"><img src="./iconos/artesanias.png" alt="logo" class="img-fluid pr-3" width="60px" height="60px" title="Artesanías de mi tierra" data-toggle="popover" data-trigger="hover">
+                  Artesanías de mi tierra
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbar">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"> 
+                            <a  class="nav-link text-dark" href="index.html" title="Inicio" data-toggle="popover" data-trigger="hover">Inicio</a> 
+                        </li>
+                        <li class="nav-item"> 
+                            <a  class="nav-link text-dark" href="./pages/catalogo.html" title="Productos" data-toggle="popover" data-trigger="hover">Catalogo</a> 
+                        </li>
+                        <li class="nav-item"> 
+                            <a  class="nav-link text-dark" href="./pages/contacto.html" title="Contacto" data-toggle="popover" data-trigger="hover">Contacto</a> 
+                        </li>
+                        <li class="nav-item"> 
+                            <a  class="nav-link text-dark" data-toggle="modal" data-target="#exampleModa1" href="#" title="Iniciar Sesion" data-toggle="popover" data-trigger="hover"><img src="./iconos/usuario.png" alt="usuario" style="width:30px; height:30px;"></a> 
+                        </li>
+                        <li class="nav-item"> 
+                            <a  class="nav-link text-dark" data-toggle="modal" data-target="#exampleModa2" href="#" title="Registrarse" data-toggle="popover" data-trigger="hover"><img src="./iconos/registro.png" alt="registro" style="width:32px; height:32px;"></a> 
+                        </li> 
+                        <li class="nav-item"> 
+                            <a  class="nav-link text-dark" href="./pages/descripcion.html" title="Carrito de compras" data-toggle="popover" data-toggle="modal" data-trigger="hover"><img src="./iconos/carrito-de-compras.png" alt="carrito" style="width:30px; height:30px;"></a> 
+                        </li>
+                    </ul>
+                </div>      
+            </nav>
+            <form id="formulario1" action="" method="post" class="needs-validation" novalidate>
+                <div class="modal fade" id="exampleModa1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Inisiar Sesion</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                            </div>
+                            <div class="modal-body">
+                                <label for="usuario">Nombre Usuario</label>
+                                    <div class="input-group ">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                                        </div>
+                                        <input type="text" name="usuario" class="form-control"  placeholder="ejemplo123"ario aria-label="Username" aria-describedby="basic-addon1" required>
+                                    </div>
+                                <label for="contrasena">Contraseña</label>
+                                    <div class="input-group ">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-lock"></i></span>
+                                        </div>
+                                        <input type="password" name="contrasena" minlength="6" class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1" required>
+                                    </div>
+                                <a href="#">Olvidaste la Contraseña?</a>    
+                            </div>
+                            <div id="boton" class="modal-footer text-left">
+                                <input type="submit" value="Iniciar Sesion" id="Iniciarsesion" class="btn btn-primary" data-dismiss="modal" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </form>
+                <form id="formulario2" action="" method="post" class="needs-validation" novalidate>
+                <div class="modal fade" id="exampleModa2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabe2" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Registro de Cliente</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                            </div>
+                            <div class="modal-body">
+                                <label for="usuario">Nombre Usuario</label>
+                                    <div class="input-group ">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                                        </div>
+                                        <input type="text" name="usuario" class="form-control" id="completo" placeholder="ejemplo123" aria-label="Username" aria-describedby="basic-addon1">
+                                    </div>
+                                <label for="email">Correo Electronico</label>
+                                    <div class="input-group ">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"  id="basic-addon1"><i class="fa fa-envelope"></i></span>
+                                        </div>
+                                        <input type="email" name="email" class="form-control" placeholder="ejemplo@gmail.com" aria-label="Username" aria-describedby="basic-addon1">
+                                    </div>
+                                <label for="email">Telefono</label>
+                                    <div class="input-group ">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"  id="basic-addon1"><i class="fa fa-phone"></i></span>
+                                        </div>
+                                        <input type="text" name="telefono" class="form-control" placeholder="3126203479" aria-label="Username" aria-describedby="basic-addon1">
+                                    </div>
+                                <label for="contrasena">Contraseña</label>
+                                    <div class="input-group ">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-lock"></i></span>
+                                        </div>
+                                        <input type="password" minlength="6" name="contrasena1"  class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1">
+                                        <input type="password" minlength="6" name="contrasena2"  class="form-control" placeholder="Confirmación" aria-label="Username" aria-describedby="basic-addon1">
+                                    </div>
+                                    <h6 id="min">Mínimo 6 Caracteres</h6>
+                            </div>
+                            <div id="boton" class="modal-footer text-left">
+                                <input type="submit" value="Registrarse" id="registrar" class="btn btn-primary" data-dismiss="modal" />
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </form>    
+        </header>
+        <div id="carouselExampleIndicators"  class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="slider embed-responsive embed-responsive-21by9 carousel-item active">
+                    <video class="embed-responsive-item video-fluid" autoplay loop muted>
+                        <source src="videos/1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="slider embed-responsive embed-responsive-21by9 carousel-item">
+                    <video class="video-fluid" autoplay loop muted>
+                        <source src="videos/2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="slider embed-responsive embed-responsive-21by9 carousel-item">
+                  <video class="video-fluid" autoplay loop muted>
+                      <source src="videos/3.mp4" type="video/mp4">
+                  </video>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <section id="galeria" class="container">
+            <div class="text-center pt-5">
+                <h1>Galeria</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore enim ducimus perferendis consectetur. Adipisci accusamus laboriosam voluptas nostrum laborum cumque veritatis, delectus, ullam eveniet dolor assumenda rem repellendus provident aperiam.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <img src="img/1.jpg" alt="galeria imagen">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <img src="img/2.jpg" alt="galeria imagen">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <img src="img/3.jpg" alt="galeria imagen">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <img src="img/4.jpg" alt="galeria imagen">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <img src="img/5.jpg" alt="galeria imagen">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <img src="img/6.jpg" alt="galeria imagen">
+                </div>
+            </div>
+        </section>
+        <hr class="my-5">
+        <section class="container">
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <img src="img/7.jpg" alt="artesano" class="img-fluid z-depth-1-half">
+                </div>
+                <div class="col-md-6 mt-5 mt-md-0">
+                    <h3 class="h3">Artesanos de mi tierra</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum mollitia molestiae cumque, quo vel optio ipsa consectetur excepturi reiciendis, aspernatur architecto officiis. Quasi non aperiam quam aliquam enim est quia.</p>
+                    <hr>
+                </div>
+            </div>
+        </section>
+        <hr class="my-5">
+        <section class="pt-5 pb-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-6">
+                <h3 class="mb-3">Nuevos Artesanos </h3>
+              </div>
+              <div class="col-6 text-right">
+                <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                  <i class="fa fa-arrow-left"></i>
+                </a>
+                <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+                  <i class="fa fa-arrow-right"></i>
+                </a>
+              </div>
+              <div class="col-12">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="row">
+                        <div class="col-md-4 mb-3">
+                          <div class="card">
+                            <img class="imagencarrusel img-fluid" alt="artesanos" src="./img/1.jpg">
+                            <div class="card-body">
+                              <h4 class="card-title">Special title treatment</h4>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                          <div class="card">
+                            <img class="imagencarrusel img-fluid" alt="artesanos" src="./img/2.jpg">
+                            <div class="card-body">
+                              <h4 class="card-title">Special title treatment</h4>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                          <div class="card">
+                            <img class="imagencarrusel img-fluid" alt="artesanos" src="./img/3.jpg">
+                            <div class="card-body">
+                              <h4 class="card-title">Special title treatment</h4>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>    
+                    </div>
+                    <div class="carousel-item">
+                      <div class="row">  
+                        <div class="col-md-4 mb-3">
+                          <div class="card">
+                            <img class="imagencarrusel img-fluid" alt="artesanos" src="./img/4.jpg">
+                            <div class="card-body">
+                              <h4 class="card-title">Special title treatment</h4>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                          <div class="card">
+                            <img class="imagencarrusel img-fluid" alt="artesanos" src="./img/5.jpg">
+                            <div class="card-body">
+                              <h4 class="card-title">Special title treatment</h4>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                          <div class="card">
+                            <img class="imagencarrusel img-fluid" alt="artesanos" src="./img/6.jpg">
+                            <div class="card-body">
+                              <h4 class="card-title">Special title treatment</h4>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>    
+                    </div>
+                    <div class="carousel-item">
+                      <div class="row">  
+                        <div class="col-md-4 mb-3">
+                          <div class="card">
+                            <img class="imagencarrusel img-fluid" alt="artesanos" src="./img/2.jpg">
+                            <div class="card-body">
+                              <h4 class="card-title">Special title treatment</h4>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                          <div class="card">
+                            <img class="imagencarrusel img-fluid" alt="artesanos" src="./img/8.jpg">
+                            <div class="card-body">
+                              <h4 class="card-title">Special title treatment</h4>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                          <div class="card">
+                            <img class="imagencarrusel img-fluid" alt="artesanos" src="./img/5.jpg">
+                            <div class="card-body">
+                              <h4 class="card-title">Special title treatment</h4>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer class="footer bg-dark text-center text-white text-lg-start bg-light text-muted">
+            <div class="container text-center text-md-start mt-5">
+                <div class="row mt-3">
+                    <div class="footer col-md-3 col-lg-4 col-xl-3 mx-auto ">
+                        <h6 class="text-uppercase fw-bold ">Nosotros</h6>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus assumenda unde omnis asperiores! Minima qui doloremque esse saepe repellat a dolore dicta, voluptatum nam, ex quidem libero animi blanditiis?</p>
+                    </div>
+                    <div class="footer col-md-3 col-lg-2 col-xl-2 mx-auto ">
+                        <h6 class="text-uppercase fw-bold ">Enlases Utiles</h6>
+                        <p><a href="index.html" class="text-reset">Inicio</a></p>
+                        <p><a href="./pages/catalogo.html" class="text-reset">Catalogo</a></p>
+                        <p><a href="./pages/contacto.html" class="text-reset">Contacto</a></p>
+                    </div>
+                    <div class="footer col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 ">
+                        <h6 class="text-uppercase fw-bold ">Contacto</h6>
+                        <p><i class="fa fa-home pr-3"></i> Colombia</p>
+                        <p><i class="fa fa-envelope pr-3"></i>info@ejemplo.com</p>
+                        <p><i class="fa fa-phone pr-3"></i>+57 314741523</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container p-4 pb-0">
+                <section class="">
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://es-la.facebook.com/" target="_blank" role="button"><i class="fa fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/?lang=es" target="_blank" role="button"><i class="fa fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://www.google.com.co/" target="_blank" role="button"><i class="fa fa-google"></i></a>
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/?hl=es" target="_blank" role="button"><i class="fa fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://www.youtube.com/" target="_blank" role="button"><i class="fa fa-youtube"></i></a>
+                </section>
+            </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">© 2021 Copyright:
+                <a class="text-white" href="#">Artesanías de mi tierra</a>
+            </div>
+        </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script src="js/codigo.js"></script>
+    </body>
+</html>
